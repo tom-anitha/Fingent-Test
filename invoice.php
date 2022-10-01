@@ -11,48 +11,48 @@ h1 {text-align: center;}
 <body>
 <form name='invoiceform' method='post' action ="report.php">
 <table id="tbl_invoice" name="tbl_invoice">
-       <thead>
-            <tr>
-                   <th>Name</th>
-                   <th>Quantity</th>
-                   <th>Unit Price (in $)</th>
-                   <th>Tax</th>
-                   <th>Total</th>
-               </tr>
-          </thead>
-                    <tbody>
-                    <tr>
-                       <td><input type="text" name="name[]" id="name"></td>
-                       <td><input type="text" name="quantity[]" id="quantity" class="quantity" onchange="myFunction(id)"></td>
-                       <td><input type="text" name="price[]" id="price" class="price" onchange="myFunctionNew(id)"></td>
-                       <td><select id="tax" name="tax[]" onchange= calculateTax(id)>
-                           <option value="0">0%</option>
-                           <option value="1">1%</option>
-                           <option value="5">5%</option>
-                           <option value="10">10%</option>
-                           </select>
-                      </td>
-                      <td id="total" class="total" name="total">
-                      </td>
-                    </tr>
-                    </tbody>
-                    </table></br>
+<thead>
+        <tr>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Unit Price (in $)</th>
+                <th>Tax</th>
+                <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+               <tr>
+                <td><input type="text" name="name[]" id="name"></td>
+                <td><input type="text" name="quantity[]" id="quantity" class="quantity" onchange="myFunction(id)"></td>
+                <td><input type="text" name="price[]" id="price" class="price" onchange="myFunctionNew(id)"></td>
+                <td><select id="tax" name="tax[]" onchange= calculateTax(id)>
+                <option value="0">0%</option>
+                <option value="1">1%</option>
+                <option value="5">5%</option>
+                <option value="10">10%</option>
+                </select>
+                </td>
+                <td id="total" class="total" name="total">
+                </td>
+                </tr>
+    </tbody>
+</table></br>
                 
-                <input type="button" class="buttonCreateInv" id="btn_Add"  value="Add More"></br></br>
-                Sub Total without tax :<input type="text" name="sub_total" id="sub_total" class="sub_total" readonly></br>
-                Sub Total with tax    :<input type="text" name="sub_total_tax" id="sub_total_tax" readonly></br>
-                Discount              :
-                <select id="discount_type" name="discount_type" onchange="myDiscount()">
+            <input type="button" class="buttonCreateInv" id="btn_Add"  value="Add More"></br></br>
+            Sub Total without tax :<input type="text" name="sub_total" id="sub_total" class="sub_total" readonly></br>
+            Sub Total with tax    :<input type="text" name="sub_total_tax" id="sub_total_tax" readonly></br>
+            Discount              :
+            <select id="discount_type" name="discount_type" onchange="myDiscount()">
                     <option value="1">%</option>
                     <option value="2">$</option>
-                </select>
-                <input type="text" name="discount" id="discount" onchange="myDiscount()"></br>
-                <b>Grand Total        :</b><input type="text" name="grand_total" id="grand_total" readonly></br></br>
+            </select>
+            <input type="text" name="discount" id="discount" onchange="myDiscount()"></br>
+            <b>Grand Total        :</b><input type="text" name="grand_total" id="grand_total" readonly></br></br>
 
                
-                <button type="submit" class="btn cat-btn btn-primary">Generate Invoice</button>
+            <button type="submit" class="btn cat-btn btn-primary">Generate Invoice</button>
 
-                </body>
+            </body>
                 
                 
 </form>
@@ -342,6 +342,10 @@ $(document).ready(function () {
         });
 
     </script>
+
+
+
+
 
 
 
