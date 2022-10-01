@@ -11,15 +11,15 @@ h1 {text-align: center;}
 <body>
 <form name='invoiceform' method='post' action ="report.php">
 <table id="tbl_invoice" name="tbl_invoice">
-                <thead>
-                    <tr>
-                      <th>Name</th>
-                       <th>Quantity</th>
-                       <th>Unit Price (in $)</th>
-                       <th>Tax</th>
-                       <th>Total</th>
-                    </tr>
-                </thead>
+       <thead>
+            <tr>
+                   <th>Name</th>
+                   <th>Quantity</th>
+                   <th>Unit Price (in $)</th>
+                   <th>Tax</th>
+                   <th>Total</th>
+               </tr>
+          </thead>
                     <tbody>
                     <tr>
                        <td><input type="text" name="name[]" id="name"></td>
